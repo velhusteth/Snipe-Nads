@@ -1,0 +1,15 @@
+[Unit]
+Description=Monad Sniper Bot
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/monad-sniper-bot
+Environment=PATH=/home/ubuntu/monad-sniper-bot/venv/bin
+ExecStart=/home/ubuntu/monad-sniper-bot/venv/bin/python bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target 
